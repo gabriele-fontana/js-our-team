@@ -74,11 +74,11 @@ function addMember() {
   const email = document.getElementById('email_input').value;
   const img = document.getElementById('img_input').value;
 
-  // Creo l'oggetto per l'array (opzionale ma consigliato)
+  
   const newMember = { name, role, email, img };
   teamMembers.push(newMember);
 
-  // Genero il markup
+
   const newMemberHTML = `
    <div class="col col-md-6 col-lg-4">
     <div class="col-wrapper d-flex align-items-stretch border rounded overflow-hidden">
@@ -96,3 +96,10 @@ function addMember() {
   // Stampo nel DOM
   rowEl.innerHTML += newMemberHTML;
 }
+const formEl = document.querySelector('form');
+
+formEl.addEventListener('submit', (event) => {
+  event.preventDefault(); // Blocca il refresh della pagina
+  addMember();            // Chiama la tua funzione
+  formEl.reset();         // Svuota i campi
+});

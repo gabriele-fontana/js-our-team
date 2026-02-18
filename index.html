@@ -16,19 +16,29 @@
             <h1>Meet our Team</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptate. Quidem et vero alias
                 perferendis, facere culpa minima natus distinctio itaque repellendus sed doloribus impedit unde expedita
-                a suscipit ab dignissimos nisi? Unde, consequuntur autem enim sapiente voluptatum rerum suscipit.</p>
-        </section>
-        <div class="container">
-            <div class="row g-3">
+                a suscipit ab dignissimos nisi? </p>
+            </section>
+            <div class="container">
+                <div class="row g-3">
+                </div>
             </div>
-        </div>
-        <form action="addMember">
-            <input type="text" placeholder="name" id="name_input">
-            <input type="text" placeholder="role" id="role_input">
-            <input type="text" placeholder="email" id="email_input">
-            <input type="text" placeholder="img" id="img_input">
-            <button type="submit">add</button>
-        </form>
+            
+            
+            <div class="form-container d-flex justify-content-around py-4">
+                <form>
+                    <input type="text" placeholder="name" id="name_input" required>
+                    <input type="text" placeholder="role" id="role_input" required>
+                    <input type="text" placeholder="email" id="email_input" required>
+                    <input type="text" placeholder="image" id="img_input" required>
+                    <button type="submit" class="btn btn-dark">add</button>
+                </form>
+            </div>
+            <hr>
+                        <div class="new-member-info container text-muted fs-6">
+                            <h4>new member:</h4>
+                            <p>name= Jack Sparrow role= Pirate email= jack@blackpearl.com image= img/jack.webp</p>
+                        </div>
+                        <hr>
     </main>
     <script src="./assets/script.js"></script>
 </body>
