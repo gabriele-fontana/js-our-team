@@ -36,8 +36,11 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
 let memberCard = ''
+
 const rowEl = document.querySelector('.row')
+
 teamMembers.forEach(element => {
   
   const {name, role, email, img} = element
@@ -46,7 +49,7 @@ teamMembers.forEach(element => {
      <div class="card mb-3" style="max-width: 540px;">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="${img}" class="img-fluid rounded-start" alt="...">
+          <img src="${img}" class="img-fluid rounded-start" alt="profile-pic">
         </div>
         <div class="col-md-8">
          <div class="card-body">
