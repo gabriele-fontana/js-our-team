@@ -64,4 +64,35 @@ teamMembers.forEach(element => {
   memberCard += markup
 });
 
+
+
 rowEl.innerHTML = memberCard
+function addMember() {
+  // Recupero i valori dagli input
+  const name = document.getElementById('name_input').value;
+  const role = document.getElementById('role_input').value;
+  const email = document.getElementById('email_input').value;
+  const img = document.getElementById('img_input').value;
+
+  // Creo l'oggetto per l'array (opzionale ma consigliato)
+  const newMember = { name, role, email, img };
+  teamMembers.push(newMember);
+
+  // Genero il markup
+  const newMemberHTML = `
+   <div class="col col-md-6 col-lg-4">
+    <div class="col-wrapper d-flex align-items-stretch border rounded overflow-hidden">
+        <img src="./assets/${img}" alt="${name}" 
+             class="img-fluid object-fit-cover w-25" 
+             style="min-width: 80px;">
+        <div class="info-wrapper flex-grow-1 p-3">
+            <h2 class="h5 mb-1">${name}</h2>
+            <h4 class="h6 mb-2">${role}</h4>
+            <p class="mb-0 small">${email}</p>
+        </div>
+    </div>
+   </div>`;
+
+  // Stampo nel DOM
+  rowEl.innerHTML += newMemberHTML;
+}
