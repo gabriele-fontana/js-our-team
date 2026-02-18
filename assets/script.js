@@ -45,23 +45,21 @@ teamMembers.forEach(element => {
   
   const {name, role, email, img} = element
   const markup = `
-   <div class="col">
-     <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="./assets/${img}" class="img-fluid rounded-start" alt="profile-pic">
+   <div class="col col-md-6 col-lg-4">
+    
+    <div class="col-wrapper d-flex align-items-stretch border rounded overflow-hidden">
+        
+        <img src="./assets/${img}" alt="member-pic" 
+             class="img-fluid object-fit-cover w-25" 
+             style="min-width: 80px;">
+             
+        <div class="info-wrapper flex-grow-1 p-3">
+            <h2 class="h5 mb-1">${name}</h2>
+            <h4 class="h6 mb-2">${role}</h4>
+            <p class="mb-0 small">${email}</p>
         </div>
-        <div class="col-md-8">
-         <div class="card-body">
-           <h5 class="card-title">${name}</h5>
-           <p class="card-text">${role}</p>
-           <p class="card-text"><small class="text-body-secondary">${email}</small></p>
-         </div>
-        </div>
-          
-        </div>
-      </div>
     </div>
+</div>
   `
   memberCard += markup
 });
