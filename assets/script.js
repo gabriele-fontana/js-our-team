@@ -45,7 +45,7 @@ teamMembers.forEach(element => {
   
   const {name, role, email, img} = element
   const markup = `
-   <div class="col col-md-6 col-lg-4">
+   <div class="col-md-6 col-lg-4">
     
     <div class="col-wrapper d-flex align-items-stretch border rounded overflow-hidden">
         
@@ -80,7 +80,7 @@ function addMember() {
 
 
   const newMemberHTML = `
-   <div class="col col-md-6 col-lg-4">
+   <div class="col-md-6 col-lg-4">
     <div class="col-wrapper d-flex align-items-stretch border rounded overflow-hidden">
         <img src="./assets/${img}" alt="${name}" 
              class="img-fluid object-fit-cover w-25" 
